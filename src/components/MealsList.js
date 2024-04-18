@@ -1,11 +1,16 @@
 import React from "react";
 import DUMMY_MEALS from "../assests/dummy-meals";
+import Card from "./Card";
 const MealList = () => {
   return (
-    <div>
-      {DUMMY_MEALS.map((meal) => {
-        return <li key={meal.id}>{meal.name}</li>;
-      })}
+    <div className="meals">
+      <ul>
+        <Card>
+          {DUMMY_MEALS.map((meal) => {
+            return <ul key={meal.id}>{meal.name}</ul>;
+          })}
+        </Card>
+      </ul>
     </div>
   );
 };
